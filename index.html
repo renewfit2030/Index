@@ -1,263 +1,174 @@
 <!DOCTYPE html>
 <html lang="en">
-<header class="bg-white shadow-md z-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RenewFit: Luxury GLP-1 Fitness For Women</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
-        <!-- Left: Logo -->
-        <a href="https://renewfit2030.github.io/Index/" class="flex items-center">
-            <img src="Simple.png" alt="RenewFit Logo" class="h-12">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f9fafb;
+            scroll-behavior: smooth;
+        }
+
+        .text-primary { color: #0F766E; }
+        .color-primary { background-color: #0F766E; }
+        .color-accent { background-color: #89DCEB; }
+    </style>
+</head>
+
+<body class="antialiased">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+
+        <a href="https://renewfit2030.github.io/Index/">
+            <img src="Simple.png" alt="RenewFit" class="h-12">
         </a>
 
-        <!-- Desktop Navigation -->
+        <!-- DESKTOP NAV -->
         <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
             <a href="https://renewfit2030.github.io/Index/mission.html" class="hover:text-primary">Our Mission</a>
             <a href="https://renewfit2030.github.io/Index/protocol.html" class="hover:text-primary">The Protocols</a>
             <a href="https://renewfit2030.github.io/Index/about_us.html" class="hover:text-primary">About Us</a>
         </nav>
 
-        <!-- Mobile Hamburger -->
-        <button id="mobileMenuBtn" class="md:hidden text-gray-700 focus:outline-none">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <!-- MOBILE MENU BUTTON -->
+        <button id="mobileMenuBtn" class="md:hidden text-gray-800">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                     d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
     </div>
 
-    <!-- Mobile Menu (Hidden by default) -->
-    <div id="mobileMenu" class="md:hidden hidden bg-white border-t border-gray-200">
-        <a href="https://renewfit2030.github.io/Index/mission.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-50">Our Mission</a>
-        <a href="https://renewfit2030.github.io/Index/protocol.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-50">The Protocols</a>
-        <a href="https://renewfit2030.github.io/Index/about_us.html" class="block px-6 py-3 text-gray-700 hover:bg-gray-50">About Us</a>
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLScG5Xj-ETPVPfGXFqZ4iT2eccglV-WY2j6GSbMBsuLko6z24g/viewform?usp=header" 
+    <!-- MOBILE MENU -->
+    <div id="mobileMenu" class="hidden md:hidden bg-white border-t border-gray-200">
+        <a href="https://renewfit2030.github.io/Index/mission.html" class="block px-6 py-3 hover:bg-gray-50">Our Mission</a>
+        <a href="https://renewfit2030.github.io/Index/protocol.html" class="block px-6 py-3 hover:bg-gray-50">The Protocols</a>
+        <a href="https://renewfit2030.github.io/Index/about_us.html" class="block px-6 py-3 hover:bg-gray-50">About Us</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScG5Xj-ETPVPfGXFqZ4iT2eccglV-WY2j6GSbMBsuLko6z24g/viewform?usp=header"
            class="block px-6 py-3 font-semibold text-primary hover:bg-gray-50">
            Get Started
         </a>
     </div>
 
-    <!-- Script to Toggle Mobile Menu -->
     <script>
         const btn = document.getElementById('mobileMenuBtn');
         const menu = document.getElementById('mobileMenu');
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
+        btn.addEventListener('click', () => menu.classList.toggle('hidden'));
     </script>
 </header>
-<body class="antialiased">
 
-    <div id="content-wrapper">
-        <!-- Header & Navigation --><header class="bg-white shadow-md z-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-                <!-- LOGO INTEGRATION: For the main page --><div class="flex items-center">
-    <!-- Logo now in background -->
-</div>
-                <nav class="hidden md:flex space-x-8 text-gray-600 font-medium">
-                    <!-- LINKS: Using your actual GitHub Pages URL --><a href="https://renewfit2030.github.io/Index/mission.html" class="hover:text-primary transition duration-300">Our Mission</a>
-                    <a href="https://renewfit2030.github.io/Index/protocol.html" class="hover:text-primary transition duration-300">The Protocols</a>
-                    <!-- NEW LINKS ADDED HERE -->
-                    <a href="./about_us.html" class="hover:text-primary transition duration-300">About Us</a>
-                    <!-- EXISTING CTA LINK -->
-                </nav>
-            <a href="https://renewfit2030.github.io/Index/protocol.html" class="md:hidden text-sm px-4 py-2 rounded-lg color-primary text-white font-semibold shadow-lg hover:opacity-90 transition duration-300">
-                Start Now
-            </a>
-            </div>
-        </header>
+<!-- HERO -->
+<section class="color-primary text-white text-center pt-20 pb-28">
+    <div class="max-w-4xl mx-auto px-6">
+        <h1 class="text-5xl font-extrabold leading-tight mb-4">
+            Where Luxury Wellness Meets GLP-1 Science
+        </h1>
+        <p class="text-xl opacity-90 mb-10">
+            A high-touch fitness experience for women on GLP-1 medications who want to feel elegant, strong, and deeply supported on their journey.
+        </p>
 
-        <!-- 1. HERO SECTION --><section class="color-primary pt-16 pb-24 text-gray-900">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-5xl sm:text-6xl font-extrabold mb-4 leading-tight">
-                    Stop Guessing. Start Renewing!
-                </h1>
-                <p class="text-xl sm:text-2xl font-light mb-8 max-w-4xl mx-auto opacity-90">
-                    The first fitness program designed exclusively for GLP-1 users. We help you lose fat without sacrificing precious muscle.
-                </p>
-                <!-- CTA linked directly to the form --><a id="assessment" href="https://docs.google.com/forms/d/e/1FAIpQLScG5Xj-ETPVPfGXFqZ4iT2eccglV-WY2j6GSbMBsuLko6z24g/viewform?usp=header" target="_blank" class="inline-block px-10 py-4 text-xl font-bold rounded-xl color-accent text-gray-900 hover:bg-sky-400 transition duration-300 shadow-2xl transform hover:scale-[1.02]">
-                    Take the Free Assessment & Find What Plan is Best for You
-                </a>
-                <p class="mt-4 text-sm opacity-70">
-                    (CORE, ELEVATE, or APEX) — Takes 2 minutes.
-                </p>
-            </div>
-        </section>
-        <!-- 2. THE PROBLEM & OUR MISSION (Now a Summary Section) --><section id="mission-summary" class="py-20 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold text-center text-gray-900 mb-4">
-                    The GLP-1 Fitness Problem
-                </h2>
-                <p class="text-xl text-center text-gray-600 mb-8 max-w-3xl mx-auto">
-                    Don't lose muscle, just fat. Take the free RenewFit Assessment now to discover which plan is best for you. 
-                    <br>
-                    <span class="font-semibold text-primary">Read our full mission and philosophy below.</span>
-                </p>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLScG5Xj-ETPVPfGXFqZ4iT2eccglV-WY2j6GSbMBsuLko6z24g/viewform?usp=header"
+           target="_blank"
+           class="px-10 py-4 bg-white text-primary font-bold rounded-full text-lg shadow-xl hover:opacity-90 transition">
+            Take the Free Wellness Evaluation
+        </a>
 
-                <div class="flex justify-center mb-12">
-                     <a href="https://renewfit2030.github.io/Index/mission.html" class="inline-block px-8 py-3 text-lg font-bold rounded-lg bg-gray-400 text-white hover:opacity-95 transition duration-300 shadow-xl">
-                        Our Mission Statement
-                    </a>
-                </div> 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <!-- Problem 1: Sarcopenia --><div class="p-6 bg-red-50 border-l-4 border-red-500 rounded-lg shadow-lg">
-                        <div class="text-2xl font-bold mb-3 text-red-700">Muscle Loss Risk</div>
-                        <p class="text-gray-700">Rapid weight loss often strips away essential lean muscle (Sarcopenia). We prioritize strength and protein to defend against this and maintain your metabolism.</p>
-                    </div>
-                    <!-- Problem 2: Side Effects --><div class="p-6 bg-yellow-50 border-l-4 border-yellow-500 rounded-lg shadow-lg">
-                        <div class="text-2xl font-bold mb-3 text-yellow-700">Nausea & Fatigue</div>
-                        <p class="text-gray-700">Traditional workouts can trigger severe nausea and fatigue. Our programs use "Movement Snacks" and appropriate rest to work with your medication, not against it.</p>
-                    </div>
-                    <!-- Problem 3: Nutrient Goals --><div class="p-6 bg-green-50 border-l-4 border-green-600 rounded-lg shadow-lg">
-                        <div class="text-2xl font-bold mb-3 text-green-600">Protein Challenge</div>
-                        <p class="text-gray-700">Appetite suppression makes hitting protein goals tough. Every plan integrates specific, actionable nutrition guidance for muscle recovery and preservation.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. THE THREE PROTOCOLS (Now a Summary Section linking to protocols.html) --><section id="plans" class="py-20 bg-gray-50">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold text-center text-gray-900 mb-12">
-                    Our Three Personalized Protocols
-                </h2>         
-                <p class="text-xl text-center text-gray-600 mb-10 max-w-3xl mx-auto">
-                    RenewFit is scientifically designed for your GLP-1 journey. Click below to see which protocol is best for you.
-                </p>
-
-                <div class="grid md:grid-cols-3 gap-8">
-
-                    <!-- Plan 1: CORE - Links to Protocols Page with #core anchor --><div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-gray-400 flex flex-col h-full hover:shadow-primary transition duration-300">
-                        <h3 class="text-3xl font-extrabold mb-3 text-gray-900">CORE</h3>
-                        <p class="text-sm uppercase font-semibold text-gray-500 mb-6">The Stabilization Phase</p>
-                        <p class="text-gray-600 mb-6 flex-grow">
-                            This 4-week program is purely defensive, focused on preventing muscle loss while your body adapts to the medication's effects. It establishes baseline movement and habits that prepare you for the strength demands of the ELEVATE plan, while minimizing nausea and fatigue.
-                        </p>
-                        <a href="https://renewfit2030.github.io/Index/protocol.html#core" class="mt-auto w-full py-3 text-center bg-gray-400 text-white font-bold rounded-lg hover:bg-gray-500 transition duration-300">
-                            View CORE Protocol
-                        </a>
-                    </div>
-
-                    <!-- Plan 2: ELEVATE - Links to Protocols Page with #elevate anchor --><div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-yellow-500 flex flex-col h-full hover:shadow-primary transition duration-300">
-                        <h3 class="text-3xl font-extrabold mb-3 text-gray-900">ELEVATE</h3>
-                        <p class="text-sm uppercase font-semibold text-yellow-600 mb-6">Stabliziation & Preservation Phases</p>
-                        <p class="text-gray-600 mb-6 flex-grow">
-                            This 12-week program incorporates the Core plan and builds on it with targeted resistance training (dumbbells or gym). The goal is aggressive Sarcopenia Defense and active muscle preservation.
-                        </p>
-                        <a href="https://renewfit2030.github.io/Index/protocol.html#elevate" class="mt-auto w-full py-3 text-center bg-yellow-500 text-white font-bold rounded-lg hover:bg-yellow-600 transition duration-300">
-                            View ELEVATE Protocol
-                        </a>
-                    </div>
-
-                    <!-- Plan 3: APEX - Links to Protocols Page with #apex anchor --><div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-green-700 flex flex-col h-full hover:shadow-primary transition duration-300"> <!--was primary Changed to border-green-600-->
-                        <h3 class="text-3xl font-extrabold mb-3 text-gray-900">APEX</h3>
-                        <p class="text-sm uppercase font-semibold text-primary mb-6">The Total Recomposition & Accountability Phase</p>
-                        <p class="text-gray-600 mb-6 flex-grow">
-                            This coach-led protocol is for clients who are fully dedicated to making permanent, holistic lifestyle changes, not just short-term weight loss. It provides 1:1 accountability to master the exercise, nutrition, and recovery habits necessary for long-term body recomposition.
-                        </p>
-                        <a href="https://renewfit2030.github.io/Index/protocol.html#apex" class="mt-auto w-full py-3 text-center bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 transition duration-300">
-                            View APEX Protocol
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <!-- 4. NEW: ABOUT US / THE COACH SUMMARY --><section id="about-summary" class="py-20 bg-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Meet the Coach
-                </h2>
-                <div class="max-w-3xl mx-auto">
-                    <img src="https://renewfit2030.github.io/Index/Coach.png" onerror="this.onerror=null;this.src='https://placehold.co/150x150/0F766E/ffffff/png?text=Coach+Photo';" alt="RenewFit Coach Photo" class="mx-auto rounded-full w-32 h-32 object-cover mb-6 border-4 border-primary shadow-lg">
-                    <p class="text-xl text-gray-600 mb-6">
-                        RenewFit was founded by Ryan Karr (UFPM, PTL), who brings 20 years of physical training experience to the program. He saw a critical need for structured, science-backed fitness programming specifically for people using GLP-1 medications, and our method is built on safety, muscle preservation, and long-term metabolic health.
-                    </p>
-                    <a href="./about_us.html" class="inline-block px-8 py-3 text-lg font-bold rounded-lg bg-gray-400 text-white hover:opacity-90 transition duration-300 shadow-xl">
-                        Read Our Full Story
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 5. NEW: PRICING SUMMARY -->
-        <section id="pricing-summary" class="py-20 bg-gray-50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h2 class="text-4xl font-bold text-gray-900 mb-4">
-                    Transparent Coaching Investment
-                </h2>
-                <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                    We offer tiered pricing based on the level of personalization and direct coaching access required for your specific plan (CORE, ELEVATE, or APEX). No hidden fees, just results.
-                </p>
-                <!-- NEW: Responsive Grid Layout for Pricing Cards -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-6">
-
-                    <!-- CORE -->
-                    <a href="https://buy.stripe.com/test_fZu4gs3neemS3qDfBM97G04" class="block w-full">
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-gray-400 hover:shadow-xl transition h-full flex flex-col justify-between">
-                            <div>
-                                <div class="text-3xl font-bold text-gray-900 mb-1">CORE</div>
-                                <div class="text-lg text-gray-500 line-through mb-2">$80</div>
-                                <div class="text-6xl font-extrabold text-primary">$49</div>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-4">One-time payment for 4-week protocol.</p>
-                        </div>
-                    </a>
-
-                    <!-- ELEVATE (Featured) -->
-                    <a href="https://buy.stripe.com/test_5kQ5kw4riemS8KXahs97G03" class="block w-full">
-                        <div class="bg-white p-8 rounded-xl shadow-2xl border-t-4 border-yellow-500 transition transform scale-[1.05] md:scale-100 md:hover:scale-[1.05] relative h-full flex flex-col justify-between">
-                            <div class="absolute top-0 right-0 -mt-4 -mr-4 px-4 py-1 bg-yellow-500 text-white text-sm font-bold uppercase rounded-full shadow-lg rotate-3">BEST VALUE</div>
-                            <div>
-                                <div class="text-3xl font-bold text-gray-900 mb-1">ELEVATE</div>
-                                <div class="text-lg text-gray-500 line-through mb-2">$150</div>
-                                <div class="text-6xl font-extrabold text-primary">$99</div>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-4">One-time payment for 12-week protocol.</p>
-                        </div>
-                    </a>
-                    
-                    <!-- APEX -->
-                    <a href="https://buy.stripe.com/test_cNiaEQ7Du4Mi1ivcpA97G02" class="block w-full">
-                        <div class="bg-white p-8 rounded-xl shadow-lg border-t-4 border-green-700 hover:shadow-xl transition h-full flex flex-col justify-between">
-                            <div>
-                                <div class="text-3xl font-bold text-gray-900 mb-1">APEX</div>
-                                <div class="text-lg text-gray-500 line-through mb-2">$410</div>
-                                <div class="text-6xl font-extrabold text-primary">$250<span class="text-2xl font-semibold ml-1">/mo</span></div>
-                            </div>
-                            <p class="text-sm text-gray-500 mt-4">Subscription for 1:1 Coaching.</p>
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- 6. FINAL CTA --><section class="py-16 bg-white">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center rounded-xl p-8 shadow-2xl border border-primary">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                    Ready to Stop Losing Muscle?
-                </h2>
-                <p class="text-lg text-gray-600 mb-6">
-                    Your RenewFit protocol starts with a 2-minute, no-obligation assessment. We need to know your side-effect profile to safely recommend your starting plan.
-                </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLScG5Xj-ETPVPfGXFqZ4iT2eccglV-WY2j6GSbMBsuLko6z24g/viewform?usp=header" target="_blank" class="inline-block px-8 py-3 text-lg font-bold rounded-lg color-accent text-gray-900 hover:bg-sky-400 transition duration-300 shadow-xl">
-                    Take the Free RenewFit Assessment Now
-                </a>
-            </div>
-        </section>
-
-        <!-- Footer --><footer class="color-primary py-8 mt-10">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-800">
-                <p class="text-sm">&copy; 2025 RenewFit. All rights reserved.</p>
-                <p class="text-xs mt-2 opacity-80">Disclaimer: RenewFit is a fitness and wellness program and is not a substitute for medical advice. Always consult your physician before starting any new fitness routine.</p>
-                <div class="mt-4 space-x-4">
-                    <a href="#" class="text-sm hover:text-gray-800">Privacy Policy</a>
-                    <span class="text-gray-800">|</span>
-                    <a href="renewfit2030@gmail.com" class="text-sm hover:text-gray-800">Contact: RenewFit</a>
-                </div>
-            </div>
-        </footer>
+        <p class="mt-3 opacity-70 text-sm">(Discover whether CORE, ELEVATE, or APEX fits you best.)</p>
     </div>
+</section>
+
+<!-- MISSION SUMMARY -->
+<section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold text-gray-900 mb-6">Your GLP-1 Journey Deserves More</h2>
+
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto mb-12">
+            GLP-1 medications simplify weight loss — but they complicate training, recovery, and confidence.  
+            RenewFit brings clarity, safety, and elegance to your transformation.
+        </p>
+
+        <a href="https://renewfit2030.github.io/Index/mission.html"
+            class="px-8 py-3 bg-gray-400 text-white rounded-full font-bold hover:opacity-90 shadow-lg transition">
+            Read Our Mission
+        </a>
+    </div>
+</section>
+
+<!-- PLANS -->
+<section id="plans" class="py-20 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-6">
+
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-10">
+            Three Exclusive Wellness Protocols
+        </h2>
+
+        <p class="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-16">
+            Each protocol is crafted for the unique physiology of women using GLP-1 medications — balancing grace, strength, and metabolic stability.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-10">
+
+            <!-- CORE -->
+            <div class="p-6 bg-white rounded-3xl shadow-xl border-t-8 border-gray-400 flex flex-col">
+                <h3 class="text-3xl font-extrabold mb-2">CORE</h3>
+                <p class="uppercase tracking-wide text-sm text-gray-500 mb-6">4-Week Foundation</p>
+
+                <p class="text-gray-600 mb-8 flex-grow">
+                    A gentle, luxury-wellness entry point designed to protect muscle, ease nausea, and rebuild confidence as your body adapts.
+                </p>
+
+                <a href="https://renewfit2030.github.io/Index/protocol.html#core"
+                   class="p-3 rounded-full bg-gray-400 text-white text-center font-bold hover:bg-gray-500 transition">
+                    Explore CORE
+                </a>
+            </div>
+
+            <!-- ELEVATE -->
+            <div class="p-6 bg-white rounded-3xl shadow-xl border-t-8 border-yellow-500 flex flex-col">
+                <h3 class="text-3xl font-extrabold mb-2">ELEVATE</h3>
+                <p class="uppercase tracking-wide text-sm text-yellow-700 mb-6">12-Week Transformation</p>
+
+                <p class="text-gray-600 mb-8 flex-grow">
+                    Includes the full CORE program + 8 weeks of refined strength training for elegant muscle definition and metabolic defense.
+                </p>
+
+                <a href="https://renewfit2030.github.io/Index/protocol.html#elevate"
+                   class="p-3 rounded-full bg-yellow-500 text-white text-center font-bold hover:bg-yellow-600 transition">
+                    Explore ELEVATE
+                </a>
+            </div>
+
+            <!-- APEX -->
+            <div class="p-6 bg-white rounded-3xl shadow-xl border-t-8 border-green-700 flex flex-col">
+                <h3 class="text-3xl font-extrabold mb-2">APEX</h3>
+                <p class="uppercase tracking-wide text-sm text-primary mb-6">1:1 Elite Coaching</p>
+
+                <p class="text-gray-600 mb-8 flex-grow">
+                    A fully personalized, concierge-style coaching experience for women seeking total recomposition and elevated accountability.
+                </p>
+
+                <a href="https://renewfit2030.github.io/Index/protocol.html#apex"
+                   class="p-3 rounded-full bg-green-700 text-white text-center font-bold hover:bg-green-800 transition">
+                    Explore APEX
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="color-primary text-white py-10 mt-10 text-center">
+    <p class="text-sm">&copy; 2025 RenewFit. All rights reserved.</p>
+    <p class="text-xs opacity-80 mt-2">Disclaimer: RenewFit is a wellness and fitness program, not medical advice. Consult your physician before beginning any routine.</p>
+</footer>
+
 </body>
-
-</html> 
-
-
-
+</html>
