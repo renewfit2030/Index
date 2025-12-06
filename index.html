@@ -8,7 +8,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
 
     <style>
-        body { font-family: 'Inter', sans-serif; background-color:#f9fafb; }
+        body { font-family: 'Inter', sans-serif; background-color:#f9fafb;             /* --- NEW: Background Watermark Logo --- */
+        background-image: url('Logo.png');
+        background-size: 100%; /* Adjust size as needed, e.g., 50% for smaller */
+        background-repeat: no-repeat;
+        background-position: center top 20%; /* Center horizontally, 30% down */
+        opacity: 0.70; /* Keep background light and readable */
+        }
         .text-primary { color:#0F766E; }
         .bg-primary { background-color:#0F766E; }
     </style>
@@ -172,6 +178,7 @@
 
 </body>
 </html>
+
 
 
 
