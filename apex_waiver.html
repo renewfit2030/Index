@@ -75,31 +75,70 @@
     </div>
 
     <script>
+        // --- CONFIGURATION ---
+        // 1. REPLACE THIS URL with the unique Web App URL generated from your Google Sheet Script. (See instructions below)
         const GOOGLE_APP_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzG56V_XfBU5KGehFtvF2qadzfLm9mjF3KIYYLP4WLuzr3eR0ibsNrITk5vSr2p600g/exec';
-        const PAYMENT_REDIRECT_URL = 'https://buy.stripe.com/test_cNiaEQ7Du4Mi1ivcpA97G02';
-
+        
+        // 2. REPLACE THIS URL with your payment site link.
+        const PAYMENT_REDIRECT_URL = 'https://buy.stripe.com/test_cNiaEQ7Du4Mi1ivcpA97G02'; 
+        
+        // --- CORE LOGIC ---
+        
         document.getElementById('waiverForm').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            const agreementChecked = document.getElementById('agreement').checked;
-            const name = document.getElementById('name').value.trim();
-            const date = document.getElementById('date').value;
+            const form = event.target;
+            const submitButton = document.getElementById('submitButton');
+            const loadingMessage = document.getElementById('loadingMessage');
+            const errorMessage = document.getElementById('errorMessage');
+            
+            // Collect data from the form inputs using their 'name' attributes
+            const data = {
+                ClientName: form.ClientName.value.trim(),
+                SignatureDate: form.SignatureDate.value,
+                Agreement: form.Agreement.checked ? 'Yes' : 'No',
+                Timestamp: new Date().toISOString()
+            };
 
-            if (agreementChecked && name && date) {
-                // In a real application, you would send this data to a server/database 
-                // (e.g., Google Sheet, Firestore, etc.) to record the agreement.
-                console.log('Waiver Electronically Signed:', { name, date });
+            // Display loading state
+            submitButton.disabled = true;
+            submitButton.textContent = 'Processing...';
+            loadingMessage.classList.remove('hidden');
+            errorMessage.classList.add('hidden');
 
-                // Hide the form and show the confirmation/download area
-                document.getElementById('waiverForm').classList.add('hidden');
+            // POST data to the Google Apps Script endpoint
+            fetch(GOOGLE_APP_SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Must use 'no-cors' for this public endpoint
+                cache: 'no-cache',
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: new URLSearchParams(data).toString()
+            })
+            .then(() => {
+                // Success path
+                loadingMessage.classList.add('hidden');
                 document.getElementById('confirmationArea').classList.remove('hidden');
+
+                // Redirect client after a brief pause
+                setTimeout(() => {
+                    window.location.href = PAYMENT_REDIRECT_URL;
+                }, 1500); // 1.5 second pause for visual confirmation
+            })
+            .catch(error => {
+                // Error path (Note: 'no-cors' often catches network errors but hides script errors)
+                console.error('Submission Error:', error);
+                submitButton.disabled = false;
+                submitButton.textContent = 'Acknowledge & Proceed to Payment';
+                loadingMessage.classList.add('hidden');
+                errorMessage.classList.remove('hidden');
                 
-                // OPTIONAL: Update the download link text
-                const downloadLink = document.querySelector('#confirmationArea a');
-                downloadLink.setAttribute('href', 'https://buy.stripe.com/test_cNiaEQ7Du4Mi1ivcpA97G02'); // *** REMEMBER TO REPLACE THIS LINK ***
-            } else {
-                alert('Please check the agreement box and fill in your name and date to continue.');
-            }
+                // Clear the error message after a few seconds
+                setTimeout(() => {
+                    errorMessage.classList.add('hidden');
+                }, 5000);
+            });
         });
     </script>
 </body>
